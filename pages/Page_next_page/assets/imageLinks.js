@@ -1,0 +1,11 @@
+export const image_image_18_2_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/5525ee56a5fb0861a6699a14dc3e0dbb";
+export const image_image_23_2_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/f663bf47e004738be7f6fca136167495";
+export const image_image_18_3_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/dab3d0c22cc10a1f49661e10b194f84f";
+export const image_image_23_3_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/d4654f2c61a82e8293e980ce5304bb7e";
+export const image_image_39_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/859b3eaa8179524d4ee554368115f94e";
+export const image_image_18_4_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/48789bcfbebdbb9caeb7c85bbb738716";
+export const image_image_23_4_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/033a186714b5bfa777a33f76d76db456";
+export const image_image_18_5_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/a4f333ac8be6d7161ef4d6480dd80e31";
+export const image_image_23_5_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/37dd6993112d1697338eaab934394679";
+export const image_favorites_icon_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c07f7817670760ef06c2ab87d35385ea";
+export const image_image_55_link = "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b";
