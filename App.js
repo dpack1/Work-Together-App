@@ -1,9 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 
 export default function App() {
   return (
@@ -20,7 +17,7 @@ export default function App() {
         <View style={styles.listElement}>
           <View style={styles.elementTopRow}>
             <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30'}} style={styles.profilePicture} />
-            <Text style={styles.itemCompanyName} onPress={() => navigation.navigate('HomeSearch')}>Logo Lawncare</Text>
+            <Text style={styles.itemCompanyName}>Logo Lawncare</Text>
           </View>
           <View>
             <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/5525ee56a5fb0861a6699a14dc3e0dbb'}} style={styles.itemCompanyPicture} />
