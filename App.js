@@ -10,12 +10,23 @@ export default function App() {
         <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
       </View>
 
-      <Text style={{ color: 'chocolate'}}> Refer Buisness Name</Text>
-      <TextInput placeholder="Search" style={styles.search}/>
+      <Text style={{ color: 'chocolate' }}> Refer Buisness Name</Text>
 
-      <View style={styles.logo}>
-        <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
+      <View style={styles.logoContainer}>
+        <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30'}} style={{height: 150, width: 200}} />
       </View>
+
+      <Text style={{ color: 'chocolate' }}> Enter the client's email</Text>
+
+
+      <TextInput placeholder="Client Name" style={styles.search}/>
+      <TextInput placeholder="Client Email" style={styles.search}/>
+      <TextInput placeholder="Message" style={styles.searchMessage}/>
+
+
+
+
+
 
       
 
@@ -53,6 +64,18 @@ const styles = StyleSheet.create({
     borderLeftWidth: 1,
     borderRightWidth: 1,
     height: 50,
+    fontSize: 20,
+    margin: 20,
+    width: '95%',
+    borderRadius: 15,
+    backgroundColor: "#e5e5e5",
+  },
+  searchMessage: {
+    borderTopWidth: 1,
+    borderBottomWidth: 1,
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    height: 100,
     fontSize: 20,
     margin: 20,
     width: '95%',
