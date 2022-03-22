@@ -10,34 +10,18 @@ export default function App() {
         <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
       </View>
 
+      <Text style={{ color: 'chocolate'}}> Refer Buisness Name</Text>
       <TextInput placeholder="Search" style={styles.search}/>
 
-      <View style={styles.ScreenTitleView}>
-        <Text style={styles.ScreenTitle}>Select Home Service</Text>
+      <View style={styles.logo}>
+        <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
       </View>
+
+      
 
       <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
 
-        <View style={styles.ListView}>
-          <Text style={styles.ListText}>Lawn and Yard Care</Text>
-        </View>
-
-        <View style={styles.ListView}>
-          <Text style={styles.ListText}>Window Cleaning</Text>
-        </View>
-
-        <View style={styles.ListView}>
-          <Text style={styles.ListText}>Gutter Cleaning</Text>
-        </View>
-
-        <View style={styles.ListView}>
-          <Text style={styles.ListText}>Home Cleaning</Text>
-        </View>
-
-        <View style={styles.ListView}>
-          <Text style={styles.ListText}>Handyman</Text>
-        </View>
-
+        
       </ScrollView>
 
       <View style={styles.NavBar}>
