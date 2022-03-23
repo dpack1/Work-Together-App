@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Button, Pressable, Text, View, Image, ImageBackground, Alert, SafeAreaView } from 'react-native';
+import { StyleSheet, Button, Pressable, Text, View, Image, ImageBackground, Alert, SafeAreaView, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
 
 export default function App() {
@@ -40,7 +40,7 @@ export default function App() {
       </View>
       
       <View style={styles.footer}>
-        <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
+      <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
         <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
         <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
 
@@ -53,6 +53,9 @@ export default function App() {
     </View>
   );
 }
+
+const windowHeight = Dimensions.get("window").height;
+const WINDOW_WIDTH = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
   button: {
@@ -129,13 +132,18 @@ const styles = StyleSheet.create({
      bottom: 0
   },
   footer: {
-     flex: 1,
-     flexDirection: 'row',
+    flex: 1,
+    flexDirection: 'row',
     justifyContent: 'space-between',
     left: 0,
     bottom: 0,
     width: '80%',
     color: 'white',
+    paddingTop: 'auto',
+    position: 'absolute',
+    top: windowHeight - 70,
+    width: WINDOW_WIDTH - 50,
+    left: 'auto'
   },
   ListText: {
     fontSize: 20,
