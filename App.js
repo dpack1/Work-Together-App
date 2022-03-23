@@ -5,7 +5,7 @@ import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gestu
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       
         
       <View style={styles.logoContainer}>
@@ -38,36 +38,7 @@ export default function App() {
           onPress={() => Alert.alert('Button with adjusted color pressed')}
         />
       </View>
-
-
-{/* <Pressable
-        onPress={() => {
-          setTimesPressed((current) => current + 1);
-        }}
-        style={({ pressed }) => [
-          {
-            backgroundColor: pressed
-              ? 'rgb(210, 230, 255)'
-              : 'white'
-          },
-          styles.wrapperCustom
-        ]}>
-        {({ pressed }) => (
-          <Text style={styles.text}>
-            {pressed ? 'Pressed!' : 'Press Me'}
-          </Text>
-        )}
-      </Pressable> */}
       
-
-{/*       
-      <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
-
-        
-      </ScrollView> */}
-
-      
-
       <View style={styles.footer}>
         <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
         <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
@@ -79,7 +50,7 @@ export default function App() {
 
 
       <StatusBar style="auto" />
-    </SafeAreaView>
+    </View>
   );
 }
 
@@ -160,18 +131,11 @@ const styles = StyleSheet.create({
   footer: {
      flex: 1,
      flexDirection: 'row',
-    //position: 'absolute',
     justifyContent: 'space-between',
     left: 0,
     bottom: 0,
-
-    
-    //alignContent: 'center',
-    //alignSelf: 'center',
     width: '80%',
-    //backgroundColor: 'red',
     color: 'white',
-    //textAlign: 'center',
   },
   ListText: {
     fontSize: 20,
@@ -196,3 +160,30 @@ const styles = StyleSheet.create({
     width: '80%',
   }
 });
+
+
+
+
+{/* <Pressable
+        onPress={() => {
+          setTimesPressed((current) => current + 1);
+        }}
+        style={({ pressed }) => [
+          {
+            backgroundColor: pressed
+              ? 'rgb(210, 230, 255)'
+              : 'white'
+          },
+          styles.wrapperCustom
+        ]}>
+        {({ pressed }) => (
+          <Text style={styles.text}>
+            {pressed ? 'Pressed!' : 'Press Me'}
+          </Text>
+        )}
+      </Pressable> */}
+      
+
+{/*       
+      <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+      </ScrollView> */}
