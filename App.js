@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
 
 export default function App() {
@@ -51,6 +51,9 @@ export default function App() {
   );
 }
 
+const WINDOW_HEIGHT = Dimensions.get("window").height;
+const WINDOW_WIDTH = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
@@ -92,7 +95,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     width: '80%',
     height: 100,
-    paddingTop: 20
+    paddingTop: 20,
+    top: WINDOW_HEIGHT - 910,
   },
   ListText: {
     fontSize: 20,
