@@ -1,7 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+//import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
+
+import { createStackNavigator } from "react-navigation-stack";
+import { createAppContainer } from "react-navigation";
+import React, { Component } from 'react';
 
 export default class Homescreen extends Component {
     render() {

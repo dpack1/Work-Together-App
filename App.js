@@ -3,8 +3,10 @@ import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
 import React, {Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {StackNavigator} from 'react-navigation';
-import { createStackNavigator, createAppContainer } from "react-navigation";
+//import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
 
+import { createStackNavigator } from "react-navigation-stack";
+import { createAppContainer } from "react-navigation";
 
 import HomeScreen from './components/HomeScreen';
 
@@ -14,8 +16,6 @@ export default class App extends React.Component {
     return <AppContainer />;
   }
 }
-
-registerRootComponent(App);
 
 const AppNavigator = createStackNavigator({
   Home: {
