@@ -9,6 +9,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 
 import HomeScreen from './components/HomeScreen';
+import SearchScreen from './components/SearchScreen';
 
 
 export default class App extends React.Component {
@@ -16,6 +17,7 @@ export default class App extends React.Component {
     return <AppContainer />;
   }
 }
+
 
 /*
 const AppNavigator = createStackNavigator({
@@ -30,16 +32,22 @@ const AppNavigator = createStackNavigator(
     Home: {
       screen: HomeScreen
     },
+    Search: { 
+      screen: SearchScreen
+    },
   },
   {
     headerMode: 'none',
+    initialRouteName: "Home",
     navigationOptions: {
         headerVisible: false,
     }
   }
 )
+//export default AppNavigator;
 
 const AppContainer = createAppContainer(AppNavigator);
+
 
 const styles = StyleSheet.create({
   container: {

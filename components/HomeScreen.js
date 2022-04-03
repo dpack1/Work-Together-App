@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
+import { Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
+import {StackNavigator} from 'react-navigation';
 //import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
 
 import { createStackNavigator } from "react-navigation-stack";
@@ -16,7 +17,11 @@ export default class Homescreen extends Component {
             <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
         </View>
 
-        <TextInput placeholder="Search" style={styles.search}/>
+        <Pressable onPress={() => this.props.navigation.navigate('Search')} style={styles.searchPressable}>
+          <View pointerEvents="none">
+          <TextInput placeholder="Search" style={styles.search} />
+          </View>
+        </Pressable>
 
         <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
 
@@ -95,10 +100,18 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     height: 50,
     fontSize: 20,
-    margin: 20,
+    marginLeft: 'auto',
+    marginRight: 'auto',
     width: '95%',
     borderRadius: 15,
     backgroundColor: "#e5e5e5",
+  },
+  searchPressable: {
+    height: 50,
+    fontSize: 20,
+    margin: 20,
+    width: '95%',
+
   },
   profilePicture: {
     width: 75,
