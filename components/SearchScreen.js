@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
+import { Pressable, TouchableHighlight, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
@@ -46,7 +46,14 @@ export default class SearchScreen extends Component {
     
             <View style={styles.NavBar}>
                 <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
+                
+                <Pressable onPress={() => this.props.navigation.navigate('Home')} style={styles.PressableHome}>
+                    <View pointerEvents="none">
+                        <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
+                    </View> 
+                </Pressable>
+
+
                 <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
             </View>
     
@@ -124,5 +131,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderBottomWidth: 1,
     width: '80%',
+  },
+  PressableHome: {
+    height: 45,
+    width: 45,
   }
 });
