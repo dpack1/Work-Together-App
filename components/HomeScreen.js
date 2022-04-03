@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width: '80%',
-    height: '70%',
+    height: '70%', //70
     
   },
   elementBottomRow: {
