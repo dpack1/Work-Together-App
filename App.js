@@ -10,6 +10,7 @@ import { createAppContainer } from "react-navigation";
 
 import HomeScreen from './components/HomeScreen';
 import SearchScreen from './components/SearchScreen';
+import FavoritesScreen from './components/FavoritesScreen';
 
 
 export default class App extends React.Component {
@@ -18,15 +19,6 @@ export default class App extends React.Component {
   }
 }
 
-
-/*
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: HomeScreen
-  },
-})
-*/
-
 const AppNavigator = createStackNavigator(
   {
     Home: {
@@ -34,6 +26,9 @@ const AppNavigator = createStackNavigator(
     },
     Search: { 
       screen: SearchScreen
+    },
+    Favorites: {
+      screen: FavoritesScreen
     },
   },
   {

@@ -67,7 +67,12 @@ export default class Homescreen extends Component {
         </ScrollView>
 
         <View style={styles.NavBar}>
-            <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
+            <Pressable onPress={() => this.props.navigation.navigate('Favorites')} style={styles.PressableHome}>
+              <View pointerEvents="none">
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
+              </View> 
+            </Pressable>
+
             <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
             <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
         </View>
@@ -157,5 +162,9 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 100,
     top: WINDOW_HEIGHT - 875,
+  },
+  PressableHome: {
+    height: 45,
+    width: 45,
   }
 });
