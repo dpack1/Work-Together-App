@@ -45,7 +45,11 @@ export default class SearchScreen extends Component {
             </ScrollView>
     
             <View style={styles.NavBar}>
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
+                <Pressable onPress={() => this.props.navigation.navigate('Favorites')} style={styles.PressableHome}>
+                  <View pointerEvents="none">
+                  <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
+                  </View> 
+                </Pressable>
                 
                 <Pressable onPress={() => this.props.navigation.navigate('Home')} style={styles.PressableHome}>
                     <View pointerEvents="none">
@@ -54,7 +58,13 @@ export default class SearchScreen extends Component {
                 </Pressable>
 
 
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+                <Pressable onPress={() => this.props.navigation.navigate('InternalProfile')} style={styles.PressableHome}>
+                  <View pointerEvents="none">
+                  <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+                  </View>
+                </Pressable>
+
+                
             </View>
     
             <StatusBar style="auto" />
