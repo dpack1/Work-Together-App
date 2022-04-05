@@ -551,7 +551,7 @@ const styles = StyleSheet.create({
       marginBottom: 349,
     },
     OffendingRectangle: {
-      width: 334,
+      width: 354,
       height: 88,
       marginBottom: 174,
     },
