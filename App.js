@@ -11,6 +11,7 @@ import { createAppContainer } from "react-navigation";
 import HomeScreen from './components/HomeScreen';
 import SearchScreen from './components/SearchScreen';
 import FavoritesScreen from './components/FavoritesScreen';
+import InternalProfileScreen from './components/InternalProfileScreen';
 
 
 export default class App extends React.Component {
@@ -29,6 +30,9 @@ const AppNavigator = createStackNavigator(
     },
     Favorites: {
       screen: FavoritesScreen
+    },
+    InternalProfile: {
+      screen: InternalProfileScreen
     },
   },
   {

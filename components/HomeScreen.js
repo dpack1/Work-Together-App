@@ -74,7 +74,12 @@ export default class Homescreen extends Component {
             </Pressable>
 
             <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
-            <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+
+            <Pressable onPress={() => this.props.navigation.navigate('InternalProfile')} style={styles.PressableHome}>
+              <View pointerEvents="none">
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+              </View>
+            </Pressable>
         </View>
 
         <StatusBar style="auto" />
