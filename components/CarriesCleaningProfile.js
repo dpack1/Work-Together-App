@@ -113,7 +113,7 @@ export default class CarriesCarpetCleaningProfile extends Component {
               </View>
 
             </View>
-            <Text onPress={() => this.props.navigation.navigate('LeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
+            <Text onPress={() => this.props.navigation.navigate('CarriesLeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
           </View>
         );
     }
