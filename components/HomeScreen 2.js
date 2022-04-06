@@ -1,13 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
-import {StackNavigator} from 'react-navigation';
 //import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
 
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import React, { Component } from 'react';
-
 
 export default class Homescreen extends Component {
     render() {
@@ -18,11 +16,7 @@ export default class Homescreen extends Component {
             <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
         </View>
 
-        <Pressable onPress={() => this.props.navigation.navigate('Search')} style={styles.searchPressable}>
-          <View pointerEvents="none">
-          <TextInput placeholder="Search" style={styles.search} />
-          </View>
-        </Pressable>
+        <TextInput placeholder="Search" style={styles.search}/>
 
         <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
 
@@ -68,19 +62,9 @@ export default class Homescreen extends Component {
         </ScrollView>
 
         <View style={styles.NavBar}>
-            <Pressable onPress={() => this.props.navigation.navigate('Favorites')} style={styles.PressableHome}>
-              <View pointerEvents="none">
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
-              </View> 
-            </Pressable>
-
+            <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
             <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
-
-            <Pressable onPress={() => this.props.navigation.navigate('InternalProfile')} style={styles.PressableHome}>
-              <View pointerEvents="none">
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
-              </View>
-            </Pressable>
+            <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
         </View>
 
         <StatusBar style="auto" />
@@ -111,18 +95,10 @@ const styles = StyleSheet.create({
     borderRightWidth: 1,
     height: 50,
     fontSize: 20,
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    margin: 20,
     width: '95%',
     borderRadius: 15,
     backgroundColor: "#e5e5e5",
-  },
-  searchPressable: {
-    height: 50,
-    fontSize: 20,
-    margin: 20,
-    width: '95%',
-
   },
   profilePicture: {
     width: 75,
@@ -148,7 +124,7 @@ const styles = StyleSheet.create({
   },
   scrollView: {
     width: '80%',
-    height: '70%', //70
+    height: '70%',
     
   },
   elementBottomRow: {
@@ -168,9 +144,5 @@ const styles = StyleSheet.create({
     width: '80%',
     height: 100,
     top: WINDOW_HEIGHT - 875,
-  },
-  PressableHome: {
-    height: 45,
-    width: 45,
   }
 });
