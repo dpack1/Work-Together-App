@@ -95,23 +95,20 @@ export default class ExternalProfile extends Component {
               </View>
               
               <View style={styles.NavBar}>
-                <Pressable onPress={() => this.props.navigation.navigate('Favorites')} style={styles.PressableHome}>
-                <View pointerEvents="none">
-                    <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
-                </View> 
-                </Pressable>
+                
+
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Favorites')}>
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
+                </TouchableHighlight>
 
                 <TouchableHighlight onPress={() => this.props.navigation.navigate('Home')}>
                     <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
                 </TouchableHighlight>
 
-                <Pressable onPress={() => this.props.navigation.navigate('InternalProfile')} style={styles.PressableHome}>
-                <View pointerEvents="none">
-                    <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
-                </View>
-                </Pressable>
 
-                
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('InternalProfile')}>
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+                </TouchableHighlight>
                 
               </View>
 
