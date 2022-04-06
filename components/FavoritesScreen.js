@@ -214,12 +214,19 @@ export default class FavoritesScreen extends Component {
         }}
       />
       <Text style={styles.Txt888}>75% of the leads they pass convert</Text>
-      <Image
+      
+
+
+    <TouchableHighlight onPress={() => this.props.navigation.navigate('ExternalProfile')}>
+    <Image
         style={styles.LogoLawncareLogo}
         source={{
           uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A359?alt=media&token=030e26aa-7710-4ff1-b74c-3577a593a9d6",
         }}
       />
+    </TouchableHighlight>
+      
+
       <Image
         style={styles.Star61}
         source={{
