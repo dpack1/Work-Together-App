@@ -113,7 +113,7 @@ export default class ExternalProfile extends Component {
               </View>
 
             </View>
-            <Text onPress={() => this.props.navigation.navigate('LeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
+            <Text onPress={() => this.props.navigation.navigate('ExternalProfileLeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
           </View>
         );
     }
