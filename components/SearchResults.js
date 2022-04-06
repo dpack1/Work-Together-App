@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
+import { TouchableHighlight, Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
 import {StackNavigator} from 'react-navigation';
 //import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
@@ -191,12 +191,16 @@ export default class SearchResult extends Component {
           }}
         />
       </View>
+
+      <TouchableHighlight onPress={() => this.props.navigation.navigate('ExternalProfile')}>
       <Image
         style={styles.CarrieSCarpetLogo}
         source={{
           uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
         }}
-      />
+      />  
+    </TouchableHighlight>
+
       <Image
         style={styles.NixitHandymanLogo}
         source={{
