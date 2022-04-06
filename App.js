@@ -16,6 +16,7 @@ import LeadsInfo from './components/leadsInfo';
 import SearchResult from './components/SearchResults';
 import ExternalProfile from './components/ExternalProfile';
 import PassALead from './components/PassALead';
+import LeadSent from './components/LeadSent';
 
 
 export default class App extends React.Component {
@@ -49,6 +50,9 @@ const AppNavigator = createStackNavigator(
     },
     PassALead: {
       screen: PassALead
+    },
+    LeadSent: {
+      screen: LeadSent
     }
   },
   {

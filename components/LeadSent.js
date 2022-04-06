@@ -8,7 +8,7 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import React, { Component } from 'react';
 
-export default class PassALead extends Component {
+export default class LeadSent extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -26,40 +26,30 @@ export default class PassALead extends Component {
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30'}} style={{height: 100, width: 150}} />
               </View>
         
-              <Text style={{ color: 'chocolate', fontSize: 20 }}> Enter the client's email</Text>
         
+              <View>
+                <Text style={styles.thankGreeting}>Thank You!</Text>
+              </View>
         
-        
-              <TextInput placeholder="Client Name" style={styles.search}/>
-              <TextInput placeholder="Client Email" style={styles.search}/>
-        
-        
-              <TextInput placeholder="Message" style={styles.searchMessage}/>
-        
+              <View style={styles.smallTextSection}>
+                <Text style={styles.smallText}>We’ve emailed BUSINESS NAME’s information to CLIENT NAME. Thanks for referring them!!</Text>
+              </View>
+            
         
               <View style={styles.button}>
                 <Button
-                  title="send"
+                  title="Back To Result"
                   color="orange"
-                  onPress={() => this.props.navigation.navigate('LeadSent')}
+                  onPress={() => this.props.navigation.navigate('ExternalProfile')}
                 />
               </View>
-              
-              <View style={styles.footer}>
-              <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
-        
-                
-              </View>
-        
-        
         
               <StatusBar style="auto" />
             </View>
           );
     }
 }
+
 
 const windowHeight = Dimensions.get("window").height;
 const WINDOW_WIDTH = Dimensions.get("window").width;
@@ -74,10 +64,25 @@ const styles = StyleSheet.create({
     //height: 50,
     fontSize: 20,
     margin: 5,
-    width: '30%',
+    width: '60%',
     borderRadius: 50,
    // backgroundColor: "#e5e5e5",
 
+  },
+  smallText: {
+    textAlign: 'center',
+    fontSize: 20
+  },
+  smallTextSection: {
+    marginTop: '15%',
+    marginBottom: '15%',
+    width: '70%'
+  },
+  thankGreeting: {
+    fontSize: 25,
+    color: '#7e7e7e',
+    marginTop: 30,
+    fontWeight: '700'
   },
   container: {
     alignItems: "center",
