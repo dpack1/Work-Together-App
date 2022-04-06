@@ -61,11 +61,11 @@ export default class Homescreen extends Component {
 
         </ScrollView>
 
-        <View style={styles.NavBar}>
+        {/* <View style={styles.NavBar}>
             <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
             <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
             <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
-        </View>
+        </View> */}
 
         <StatusBar style="auto" />
         </View>

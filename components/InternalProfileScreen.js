@@ -11,10 +11,13 @@ import React, { Component } from 'react';
 export default class InternalProfileScreen extends Component {
     render() {
     return (
-
         <View style={styles.InternalProfileView}>
-        <Image style={styles.MaskGroup} source={{ uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A26?alt=media&token=679e7a89-8457-40c7-a27c-92fcd7d36358",}}/>
-        
+        <Image
+          style={styles.MaskGroup}
+          source={{
+            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A26?alt=media&token=679e7a89-8457-40c7-a27c-92fcd7d36358",
+          }}
+        />
         <Text style={styles.Txt861}>Create a post</Text>
         <Text style={styles.Txt645}>given: 52</Text>
         <Text style={styles.Txt811}>converted: 46</Text>
@@ -99,7 +102,7 @@ export default class InternalProfileScreen extends Component {
             />
           </View>
         </View>
-        <Text onPress={() => this.props.navigation.navigate('LeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
+        <Text onPress={() => this.props.navigation.navigate('leadsInfo.js')} style={styles.Txt553}>Leads this quarter</Text>
       </View>
     );
     }

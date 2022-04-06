@@ -67,7 +67,7 @@ export default class Homescreen extends Component {
 
         </ScrollView>
 
-        <View style={styles.NavBar}>
+        {/* <View style={styles.NavBar}>
             <Pressable onPress={() => this.props.navigation.navigate('Favorites')} style={styles.PressableHome}>
               <View pointerEvents="none">
                 <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
@@ -81,7 +81,7 @@ export default class Homescreen extends Component {
                 <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
               </View>
             </Pressable>
-        </View>
+        </View> */}
 
         <StatusBar style="auto" />
         </View>

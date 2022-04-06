@@ -19,44 +19,42 @@ import * as React from 'react';
 import MainContainer from './navigation/MainContainer';
 
 function App(){
-  // render() {
   return (
     <MainContainer/>
   );
-  // }
 }
 
 export default App;
 
-// const AppNavigator = createStackNavigator(
-//   {
-//     Home: {
-//       screen: HomeScreen
-//     },
-//     Search: { 
-//       screen: SearchScreen
-//     },
-//     Favorites: {
-//       screen: FavoritesScreen
-//     },
-//     InternalProfile: {
-//       screen: InternalProfileScreen
-//     },
-//     LeadsInfo: {
-//       screen: LeadsInfo
-//     }
-//   },
-//   {
-//     headerMode: 'none',
-//     initialRouteName: "Home",
-//     navigationOptions: {
-//         headerVisible: false,
-//     }
-//   }
-// )
-// //export default AppNavigator;
+const AppNavigator = createStackNavigator(
+  {
+    Home: {
+      screen: HomeScreen
+    },
+    Search: { 
+      screen: SearchScreen
+    },
+    Favorites: {
+      screen: FavoritesScreen
+    },
+    InternalProfile: {
+      screen: InternalProfileScreen
+    },
+    LeadsInfo: {
+      screen: LeadsInfo
+    }
+  },
+  {
+    headerMode: 'none',
+    initialRouteName: "Home",
+    navigationOptions: {
+        headerVisible: false,
+    }
+  }
+)
+//export default AppNavigator;
 
-// const AppContainer = createAppContainer(AppNavigator);
+ const AppContainer = createAppContainer(AppNavigator);
 
 
 // const styles = StyleSheet.create({
