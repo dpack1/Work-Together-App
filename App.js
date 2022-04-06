@@ -146,9 +146,9 @@ export default class FavoritesScreen extends Component {
           }}
         />
         <View style={styles.Group9107}>
-          <Text style={styles.Txt955}>my Favorites</Text>
+          <TextInput placeholder="Search" style={styles.search}/>
           <Text style={styles.Txt1094}>
-            Businesses you want to keep in mind for future referrals
+            Select Business
           </Text>
           <Image
             style={styles.OffendingRectangle}
@@ -544,7 +544,7 @@ const styles = StyleSheet.create({
       fontFamily: "Lato, sans-serif",
       fontWeight: "400",
       color: "rgba(151,151,151,1)",
-      textAlign: "center",
+      textAlign: "left",
       justifyContent: "center",
       width: 208,
       height: 25,
@@ -677,5 +677,17 @@ const styles = StyleSheet.create({
       color: "rgba(102,120,141,1)",
       width: 101,
       height: 27,
+    },
+    search: {
+      borderTopWidth: 1,
+      borderBottomWidth: 1,
+      borderLeftWidth: 1,
+      borderRightWidth: 1,
+      height: 50,
+      fontSize: 20,
+      margin: 20,
+      width: '95%',
+      borderRadius: 15,
+      backgroundColor: "#e5e5e5",
     },
   });
