@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
+import { TouchableHighlight, Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
 import {StackNavigator} from 'react-navigation';
 //import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
@@ -93,14 +93,26 @@ export default class InternalProfileScreen extends Component {
               />
             </View>
           </View>
-          <View style={styles.Group170}>
-            <Image
-              style={styles.NavBarIcons}
-              source={{
-                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A31?alt=media&token=88104b82-5d00-44d7-9152-172e24b251b9",
-              }}
-            />
-          </View>
+          
+          <View style={styles.NavBar}>
+                
+
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Favorites')}>
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Home')}>
+                    <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
+                </TouchableHighlight>
+
+
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('InternalProfile')}>
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+                </TouchableHighlight>
+                
+              </View>      
+              
+
         </View>
         <Text onPress={() => this.props.navigation.navigate('LeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
       </View>
@@ -108,7 +120,26 @@ export default class InternalProfileScreen extends Component {
     }
 }
 
+const WINDOW_HEIGHT = Dimensions.get("window").height;
+const WINDOW_WIDTH = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
+  NavBarIcon: {
+    height: 45,
+    width: 45,
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    
+  },
+  NavBar: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
+    height: 100,
+    top: WINDOW_HEIGHT - 875,
+    backgroundColor: 'green'
+  },
     InternalProfileView: {
       display: "flex",
       flexDirection: "column",
