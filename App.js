@@ -172,7 +172,7 @@ export default class FavoritesScreen extends Component {
         <Image
           style={styles.GutterGuyLogo}
           source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A346?alt=media&token=e5600f59-f40e-4255-b206-3a635baa56f1",
+            uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
           }}
         />
         <Image
@@ -191,20 +191,20 @@ export default class FavoritesScreen extends Component {
       <Image
         style={styles.CarrieSCarpetLogo}
         source={{
-          uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A353?alt=media&token=0126d103-d201-46ad-9bb7-f0a8c67ef488",
+          uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
         }}
       />
       <Image
         style={styles.NixitHandymanLogo}
         source={{
-          uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A354?alt=media&token=efdbc2c6-42a9-4d4d-8693-ee67259d0167",
+          uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
         }}
       />
       <Text style={styles.Txt888}>75% of the leads they pass convert</Text>
       <Image
         style={styles.LogoLawncareLogo}
         source={{
-          uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A359?alt=media&token=030e26aa-7710-4ff1-b74c-3577a593a9d6",
+          uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
         }}
       />
       <Image
@@ -551,9 +551,9 @@ const styles = StyleSheet.create({
       marginBottom: 349,
     },
     OffendingRectangle: {
-      width: 354,
+      width: 334, 
       height: 88,
-      marginBottom: 174,
+      marginBottom: 174
     },
     NavBar: {
       width: 375,
