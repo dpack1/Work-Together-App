@@ -15,6 +15,7 @@ import InternalProfileScreen from './components/InternalProfileScreen';
 import LeadsInfo from './components/leadsInfo';
 import SearchResult from './components/SearchResults';
 import ExternalProfile from './components/ExternalProfile';
+import PassALead from './components/PassALead';
 
 
 export default class App extends React.Component {
@@ -45,6 +46,9 @@ const AppNavigator = createStackNavigator(
     },
     ExternalProfile: {
       screen: ExternalProfile
+    },
+    PassALead: {
+      screen: PassALead
     }
   },
   {

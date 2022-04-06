@@ -18,7 +18,7 @@ export default class ExternalProfile extends Component {
                 uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
               }}
             />
-            <Text style={styles.Txt861}>Create a post</Text>
+            <Text onPress={() => this.props.navigation.navigate('PassALead')} style={styles.Txt861}>Pass A Lead</Text>
             <Text style={styles.Txt645}>given: 89</Text>
             <Text style={styles.Txt811}>converted: 67</Text>
             <Text style={styles.Txt101}>Reviews</Text>
