@@ -17,6 +17,7 @@ import SearchResult from './components/SearchResults';
 import ExternalProfile from './components/ExternalProfile';
 import PassALead from './components/PassALead';
 import LeadSent from './components/LeadSent';
+import CarriesCarpetCleaningProfile from './components/CarriesCleaningProfile';
 
 
 export default class App extends React.Component {
@@ -53,6 +54,9 @@ const AppNavigator = createStackNavigator(
     },
     LeadSent: {
       screen: LeadSent
+    },
+    CarriesCarpetCleaningProfile: {
+      screen: CarriesCarpetCleaningProfile
     }
   },
   {
