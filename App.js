@@ -19,7 +19,8 @@ import PassALead from './components/PassALead';
 import LeadSent from './components/LeadSent';
 import CarriesCarpetCleaningProfile from './components/CarriesCleaningProfile';
 import CarriesLeadsInfo from './components/CarriesLeadsInfo';
-
+import CarriesPassALead from './components/CarriesPassALead';
+import CarriesLeadSent from './components/CarriesLeadSent';
 
 export default class App extends React.Component {
   render() {
@@ -61,6 +62,12 @@ const AppNavigator = createStackNavigator(
     },
     CarriesLeadsInfo: {
       screen: CarriesLeadsInfo
+    },
+    CarriesPassALead: {
+      screen: CarriesPassALead
+    },
+    CarriesLeadSent: {
+      screen: CarriesLeadSent
     }
   },
   {

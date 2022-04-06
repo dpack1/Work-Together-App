@@ -18,7 +18,7 @@ export default class CarriesCarpetCleaningProfile extends Component {
                 uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A353?alt=media&token=0126d103-d201-46ad-9bb7-f0a8c67ef488",
               }}
             />
-            <Text onPress={() => this.props.navigation.navigate('PassALead')} style={styles.Txt861}>Pass A Lead</Text>
+            <Text onPress={() => this.props.navigation.navigate('CarriesPassALead')} style={styles.Txt861}>Pass A Lead</Text>
             <Text style={styles.Txt645}>given: 19</Text>
             <Text style={styles.Txt811}>converted: 27</Text>
             <Text style={styles.Txt101}>Reviews</Text>
