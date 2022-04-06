@@ -127,12 +127,27 @@ export default class FavoritesScreen extends Component {
           }}
         />
         <Text style={styles.Txt833}>120</Text>
-        <Image
-          style={styles.NavBarIcons}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A336?alt=media&token=8f4be4e0-5363-400a-8686-5a0addaa4350",
-          }}
-        />
+        <View style={styles.NavBarIcons}>
+
+          <Pressable onPress={() => this.props.navigation.navigate('Favorites')} style={styles.searchPressable}>
+            <View pointerEvents="none">
+            <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
+            </View>
+          </Pressable>
+
+          <Pressable onPress={() => this.props.navigation.navigate('Home')} style={styles.searchPressable}>
+            <View pointerEvents="none">
+              <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
+            </View>
+          </Pressable>
+
+          <Pressable onPress={() => this.props.navigation.navigate('InternalProfile')} style={styles.searchPressable}>
+            <View pointerEvents="none">
+            <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+            </View>
+          </Pressable>
+
+        </View>
         <Image
           style={styles.Image49}
           source={{
@@ -156,12 +171,7 @@ export default class FavoritesScreen extends Component {
               uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A344?alt=media&token=78376bee-eed0-48c2-885c-e3f4d0e9efc5",
             }}
           />
-          <Image
-            style={styles.NavBar}
-            source={{
-              uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A335?alt=media&token=04cf803c-96cd-414e-947c-abc9c01cddd5",
-            }}
-          />
+
         </View>
         <Image
           style={styles.Image501}
@@ -244,9 +254,31 @@ export default class FavoritesScreen extends Component {
     }
 }
 
-
+const WINDOW_HEIGHT = Dimensions.get("window").height;
+const WINDOW_WIDTH = Dimensions.get("window").width;
 
 const styles = StyleSheet.create({
+  searchPressable: {
+    fontSize: 20,
+    margin: 20,
+    //height: 50,
+    //width: '95%',
+    height: 45,
+    width: 45,
+    backgroundColor: 'green'
+  },
+  NavBarIcon: {
+    height: 45,
+    width: 45,
+  },
+  NavBar: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '80%',
+    height: 100,
+    top: WINDOW_HEIGHT - 875,
+  },
     FavoritesView: {
       display: "flex",
       flexDirection: "column",
@@ -503,6 +535,8 @@ const styles = StyleSheet.create({
       width: 233,
       height: 40,
       opacity: 0.6,
+      flexDirection: 'row',
+      justifyContent: 'space-between',
     },
     Image49: {
       position: "absolute",
