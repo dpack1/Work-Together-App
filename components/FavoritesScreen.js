@@ -263,9 +263,9 @@ const styles = StyleSheet.create({
     margin: 20,
     //height: 50,
     //width: '95%',
-    height: 45,
-    width: 45,
-    backgroundColor: 'green'
+    height: 50,
+    width: 50,
+    //backgroundColor: 'green'
   },
   NavBarIcon: {
     height: 45,
