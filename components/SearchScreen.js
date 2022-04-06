@@ -23,7 +23,7 @@ export default class SearchScreen extends Component {
             <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
     
                 <View style={styles.ListView}>
-                <Text style={styles.ListText}>Lawn and Yard Care</Text>
+                <Text  onPress={() => this.props.navigation.navigate('SearchResult')} style={styles.ListText}>Lawn and Yard Care</Text>
                 </View>
     
                 <View style={styles.ListView}>
