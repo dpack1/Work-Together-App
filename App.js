@@ -146,7 +146,7 @@ export default class FavoritesScreen extends Component {
           }}
         />
         <View style={styles.Group9107}>
-          <TextInput placeholder="Search" style={styles.search}/>
+          <TextInput placeholder="Lawncare Services" style={styles.search}/>
           <Text style={styles.Txt1094}>
             Select Business
           </Text>
