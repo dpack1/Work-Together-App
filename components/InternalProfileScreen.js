@@ -102,7 +102,7 @@ export default class InternalProfileScreen extends Component {
             />
           </View>
         </View>
-        <Text style={styles.Txt553}>Leads this quarter</Text>
+        <Text onPress={() => this.props.navigation.navigate('LeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
       </View>
     );
     }

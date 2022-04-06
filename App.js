@@ -12,6 +12,7 @@ import HomeScreen from './components/HomeScreen';
 import SearchScreen from './components/SearchScreen';
 import FavoritesScreen from './components/FavoritesScreen';
 import InternalProfileScreen from './components/InternalProfileScreen';
+import LeadsInfo from './components/leadsInfo';
 
 
 export default class App extends React.Component {
@@ -34,6 +35,9 @@ const AppNavigator = createStackNavigator(
     InternalProfile: {
       screen: InternalProfileScreen
     },
+    LeadsInfo: {
+      screen: LeadsInfo
+    }
   },
   {
     headerMode: 'none',
