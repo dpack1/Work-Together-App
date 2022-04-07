@@ -38,7 +38,7 @@ export default class SearchScreen extends Component {
                 <Text style={styles.ListText}>Home Cleaning</Text>
                 </View>
     
-                <View style={styles.ListView}>
+                <View style={styles.LastElementView}>
                 <Text style={styles.ListText}>Handyman</Text>
                 </View>
     
@@ -106,17 +106,36 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignItems: 'center',
     borderBottomColor: 'black',
+    //borderBottomWidth: 1,
+    borderTopWidth: 1,
+  },
+  LastElementView: {
+    flex: 1,
+    flexDirection: 'column',
+    alignItems: 'center',
+    borderBottomColor: 'black',
     borderBottomWidth: 1,
+    borderTopWidth: 1,
   },
   ScreenTitle: {
     fontSize: 20,
     borderBottomWidth: 1,
-    paddingBottom: '0%'
+    paddingBottom: '0%',
+
+    fontSize: 25,
+      fontFamily: "sans-serif",
+      fontWeight: "400",
+      lineHeight: 42,
+      color: "rgba(255,140,0,1)",
+      //width: 154,
+      //height: 179,
   },
   ScreenTitleView: {
     alignItems: 'center',
-    borderBottomWidth: 1,
+    //borderBottomWidth: 1,
+    marginBottom: 20,
     width: '80%',
+
   },
   PressableHome: {
     height: 45,
