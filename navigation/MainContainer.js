@@ -7,6 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Homescreen from '../components/HomeScreen';
 import InternalProfileScreen from '../components/InternalProfileScreen';
 import FavoritesScreen from '../components/FavoritesScreen';
+import { NavigationEvents } from 'react-navigation';
 
 // Screen names
 const homeName = "Home";
@@ -46,6 +47,11 @@ export default function MainContainer(){
                 headerVisible: false,
 
             }}
+            screenOptions={{
+                headerShown: false,
+                tabBarIconStyle: { display: "none" }
+              }}
+
             
             
             >
