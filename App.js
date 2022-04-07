@@ -17,6 +17,7 @@ import PassALead from './components/PassALead';
 import LeadSent from './components/LeadSent';
 import ExternalProfileLeadsInfo from './components/ExternalProfileLeadsInfo';
 import leadsInfo from './components/leadsInfo';
+import theSearchScreen from './components/TheSearchScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -68,6 +69,7 @@ function HomeStackScreen() {
      <HomeStack.Screen name="PassALead" component={PassALead} />
      <HomeStack.Screen name="LeadSent" component={LeadSent} />
      <HomeStack.Screen name="ExternalProfileLeadsInfo" component={ExternalProfileLeadsInfo} />
+     <HomeStack.Screen name="theSearchScreen" component={theSearchScreen} />
     </HomeStack.Navigator>
    );
  }
