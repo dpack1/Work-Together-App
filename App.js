@@ -3,6 +3,8 @@ import { Button, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import { AntDesign } from '@expo/vector-icons'; 
 
 import HomeScreen from "./components/HomeScreen";
 import ProfileScreen from "./components/InternalProfileScreen";
@@ -25,29 +27,32 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-       screenOptions={({ route }) => ({
+         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
-         let iconName;
-         if (route.name === 'Home') {
+          let iconName;
+          if (route.name === 'Home') {
             iconName = focused
-            ? 'ios-information-circle'
-            : 'ios-information-circle-outline';
-          } else if (route.name === 'Settings') {
+            ? 'ios-home-outline'
+            : 'ios-home-outline';
+          } else if (route.name === 'Favorites') {
             iconName = focused
-            ? 'ios-list-box'
-            : 'ios-list';
-          };
+            ? 'ios-heart-outline'
+            : 'ios-heart-outline';
+          }
+          else if(route.name === 'Profile') {
+            iconName = focused
+            ? 'ios-person-outline'
+            : 'ios-person-outline';
+          }
+    
+    return <Ionicons name={iconName} size={size} color={color}     />;
        },
     })}
-tabBarOptions={{
+    tabBarOptions={{
     activeTintColor: 'tomato',
     inactiveTintColor: 'gray',
     }}
-    screenOptions={{
-      headerShown: false,
-      tabBarIconStyle: { display: "none" }
-    }}
-    >
+   >
         <Tab.Screen name="Favorites" component={FavoriteStackScreen} />
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Profile" component={ProfileStackScreen} />
