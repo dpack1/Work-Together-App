@@ -1,67 +1,84 @@
-import { StatusBar } from 'expo-status-bar';
-import ExpoStatusBar from 'expo-status-bar/build/ExpoStatusBar';
-//import React, {Component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {StackNavigator} from 'react-navigation';
-//import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
-
-import { createStackNavigator } from "react-navigation-stack";
-import { createAppContainer } from "react-navigation";
-
-import HomeScreen from './components/HomeScreen';
-import SearchScreen from './components/SearchScreen';
-import FavoritesScreen from './components/FavoritesScreen';
-import InternalProfileScreen from './components/InternalProfileScreen';
-import LeadsInfo from './components/leadsInfo';
-
-
 import * as React from 'react';
-import MainContainer from './navigation/MainContainer';
+import { Button, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-function App(){
+import HomeScreen from "./components/HomeScreen";
+import ProfileScreen from "./components/InternalProfileScreen";
+import SearchScreen from "./components/SearchScreen";
+
+
+const Tab = createBottomTabNavigator();
+export default function App() {
   return (
-    <MainContainer/>
+    <NavigationContainer>
+      <Tab.Navigator
+       screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused, color, size }) => {
+         let iconName;
+         if (route.name === 'Home') {
+            iconName = focused
+            ? 'ios-information-circle'
+            : 'ios-information-circle-outline';
+          } else if (route.name === 'Settings') {
+            iconName = focused
+            ? 'ios-list-box'
+            : 'ios-list';
+          };
+       },
+    })}
+tabBarOptions={{
+    activeTintColor: 'tomato',
+    inactiveTintColor: 'gray',
+    }}
+    screenOptions={{
+      headerShown: false,
+      tabBarIconStyle: { display: "none" }
+    }}
+    >
+        <Tab.Screen name="Home" component={HomeStackScreen} />
+        <Tab.Screen name="Profile" component={ProfileStackScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
 
-export default App;
+const HomeStack = createStackNavigator();
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator screenOptions={{
+      headerShown: false
+    }}>
+     <HomeStack.Screen name="Home" component={HomeScreen}/>
+     <HomeStack.Screen name="Profile" component={ProfileScreen} />
+     <HomeStack.Screen name="Search" component={SearchScreen} />
+    </HomeStack.Navigator>
+   );
+ }
 
-const AppNavigator = createStackNavigator(
-  {
-    Home: {
-      screen: HomeScreen
-    },
-    Search: { 
-      screen: SearchScreen
-    },
-    Favorites: {
-      screen: FavoritesScreen
-    },
-    InternalProfile: {
-      screen: InternalProfileScreen
-    },
-    LeadsInfo: {
-      screen: LeadsInfo
-    }
-  },
-  {
-    headerMode: 'none',
-    initialRouteName: "Home",
-    navigationOptions: {
-        headerVisible: false,
-    }
-  }
-)
-//export default AppNavigator;
-
- const AppContainer = createAppContainer(AppNavigator);
-
-
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-// });
+const ProfileStack = createStackNavigator();
+function ProfileStackScreen() {
+  return (
+    <ProfileStack.Navigator screenOptions={{
+      headerShown: false
+    }}>
+     <ProfileStack.Screen name="Profile" component={ProfileScreen} />
+     <ProfileStack.Screen name="Search" component={SearchScreen} />
+    </ProfileStack.Navigator>
+   );
+ }
+ 
+const SearchStack = createStackNavigator();
+function SearchStackScreen() {
+  return (
+    <SearchStack.Navigator screenOptions={{
+      headerShown: false
+    }}>
+     <SearchStack.Screen name="Home" component={HomeScreen}/>
+     <SearchStack.Screen name="Profile" component={ProfileScreen} />
+     <SearchStack.Screen name="Search" component={SearchScreen} />
+    </SearchStack.Navigator>
+   );
+ }
+ 
