@@ -7,6 +7,16 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from "./components/HomeScreen";
 import ProfileScreen from "./components/InternalProfileScreen";
 import SearchScreen from "./components/SearchScreen";
+import FavoritesScreen from "./components/FavoritesScreen";
+import CarriesCarpetCleaningProfile from './components/CarriesCleaningProfile';
+import CarriesPassALeadScreen from './components/CarriesPassALead';
+import CarriesLeadSent from './components/CarriesLeadSent';
+import CarriesLeadsInfo from './components/CarriesLeadsInfo';
+import ExternalProfile from "./components/ExternalProfile";
+import PassALead from './components/PassALead';
+import LeadSent from './components/LeadSent';
+import ExternalProfileLeadsInfo from './components/ExternalProfileLeadsInfo';
+import leadsInfo from './components/leadsInfo';
 
 
 const Tab = createBottomTabNavigator();
@@ -37,6 +47,7 @@ tabBarOptions={{
       tabBarIconStyle: { display: "none" }
     }}
     >
+        <Tab.Screen name="Favorites" component={FavoriteStackScreen} />
         <Tab.Screen name="Home" component={HomeStackScreen} />
         <Tab.Screen name="Profile" component={ProfileStackScreen} />
       </Tab.Navigator>
@@ -53,6 +64,10 @@ function HomeStackScreen() {
      <HomeStack.Screen name="Home" component={HomeScreen}/>
      <HomeStack.Screen name="Profile" component={ProfileScreen} />
      <HomeStack.Screen name="Search" component={SearchScreen} />
+     <HomeStack.Screen name="ExternalProfile" component={ExternalProfile} />
+     <HomeStack.Screen name="PassALead" component={PassALead} />
+     <HomeStack.Screen name="LeadSent" component={LeadSent} />
+     <HomeStack.Screen name="ExternalProfileLeadsInfo" component={ExternalProfileLeadsInfo} />
     </HomeStack.Navigator>
    );
  }
@@ -65,6 +80,7 @@ function ProfileStackScreen() {
     }}>
      <ProfileStack.Screen name="Profile" component={ProfileScreen} />
      <ProfileStack.Screen name="Search" component={SearchScreen} />
+     <ProfileStack.Screen name="leadsInfo" component={leadsInfo} />
     </ProfileStack.Navigator>
    );
  }
@@ -81,4 +97,18 @@ function SearchStackScreen() {
     </SearchStack.Navigator>
    );
  }
- 
+
+const FavoritesStack = createStackNavigator();
+function FavoriteStackScreen() {
+  return (
+    <FavoritesStack.Navigator screenOptions={{
+      headerShown: false
+    }}>
+     <FavoritesStack.Screen name="Favorites" component={FavoritesScreen} /> 
+     <FavoritesStack.Screen name="CarrieProfile" component={CarriesCarpetCleaningProfile} />
+     <FavoritesStack.Screen name="CarriesPassALead" component={CarriesPassALeadScreen} />
+     <FavoritesStack.Screen name="CarriesLeadSent" component={CarriesLeadSent} />
+     <FavoritesStack.Screen name="CarriesLeadsInfo" component={CarriesLeadsInfo} />
+    </FavoritesStack.Navigator>
+   );
+ }

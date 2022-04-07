@@ -8,7 +8,6 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import React, { Component } from 'react';
 
-
 export default class Homescreen extends Component {
     render() {
     return (
@@ -29,7 +28,7 @@ export default class Homescreen extends Component {
             <View style={styles.listElement}>
             <View style={styles.elementTopRow}>
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30'}} style={styles.profilePicture} />
-                <Text style={styles.itemCompanyName}>Logo Lawncare</Text>
+                <Text onPress={() => this.props.navigation.navigate('ExternalProfile')} style={styles.itemCompanyName}>Logo Lawncare</Text>
             </View>
             <View>
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/5525ee56a5fb0861a6699a14dc3e0dbb'}} style={styles.itemCompanyPicture} />
@@ -42,7 +41,7 @@ export default class Homescreen extends Component {
             <View style={styles.listElement}>
             <View style={styles.elementTopRow}>
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c65e6af836c384405da617fc659d1e70'}} style={styles.profilePicture} />
-                <Text style={styles.itemCompanyName}>Werken</Text>
+                <Text onPress={() => this.props.navigation.navigate('Profile')} style={styles.itemCompanyName}>Werken</Text>
             </View>
             <View>
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/01d1f304d219cb7161b5d9cf9c8714ba'}} style={styles.itemCompanyPicture} />
@@ -67,7 +66,7 @@ export default class Homescreen extends Component {
 
         </ScrollView>
 
-        {/* <View style={styles.NavBar}>
+        <View style={styles.NavBar}>
             <Pressable onPress={() => this.props.navigation.navigate('Favorites')} style={styles.PressableHome}>
               <View pointerEvents="none">
                 <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
@@ -81,7 +80,7 @@ export default class Homescreen extends Component {
                 <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
               </View>
             </Pressable>
-        </View> */}
+        </View>
 
         <StatusBar style="auto" />
         </View>

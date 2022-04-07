@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
+import { TouchableHighlight, Pressable, StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import { gestureHandlerRootHOC, ScrollView, TextInput } from 'react-native-gesture-handler';
 import {StackNavigator} from 'react-navigation';
 //import { createStackNavigator, createAppContainer } from 'react-navigation-stack';
@@ -8,107 +8,137 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import React, { Component } from 'react';
 
-export default class InternalProfileScreen extends Component {
+export default class CarriesCarpetCleaningProfile extends Component {
     render() {
-    return (
-        <View style={styles.InternalProfileView}>
-        <Image
-          style={styles.MaskGroup}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A26?alt=media&token=679e7a89-8457-40c7-a27c-92fcd7d36358",
-          }}
-        />
-        <Text style={styles.Txt861}>Create a post</Text>
-        <Text style={styles.Txt645}>given: 52</Text>
-        <Text style={styles.Txt811}>converted: 46</Text>
-        <Text style={styles.Txt101}>Reviews</Text>
-        <Text style={styles.Txt427}>
-          We guarantee the best window cleaning job!!
-        </Text>
-        <Text style={styles.Txt932}>Werken</Text>
-        <Image
-          style={styles.Star1}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A42?alt=media&token=be688578-57a2-4020-bb22-78d1cf2408d3",
-          }}
-        />
-        <Image
-          style={styles.Star5}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A43?alt=media&token=8d5491a5-8c47-4d93-bd6c-4afdbd933442",
-          }}
-        />
-        <Image
-          style={styles.Star2}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A44?alt=media&token=e3dc0827-5e79-4a4b-9ee1-bd521d51bf35",
-          }}
-        />
-        <Image
-          style={styles.Star3}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A45?alt=media&token=add6a2ee-f227-4cf1-bd2d-fff1f7b60c6c",
-          }}
-        />
-        <Image
-          style={styles.Star4}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A46?alt=media&token=68e55804-4dfd-414e-b91a-b6d1bd067907",
-          }}
-        />
-        <Text style={styles.Txt744}>(40)</Text>
-        <View style={styles.Group642}>
-          <Image
-            style={styles.Image24}
-            source={{
-              uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A61?alt=media&token=340e8b51-9d17-400a-bedf-5e1b881bb9e8",
-            }}
-          />
-          <View style={styles.Group270}>
+        return (
+            <View style={styles.InternalProfileView}>
             <Image
-              style={styles.Frame4}
+              style={styles.MaskGroup}
               source={{
-                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A48?alt=media&token=a82c1c27-b6c3-4e0f-b050-fcdf7557fe75",
+                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A353?alt=media&token=0126d103-d201-46ad-9bb7-f0a8c67ef488",
               }}
             />
-            <View style={styles.Group210}>
+            <Text onPress={() => this.props.navigation.navigate('CarriesPassALead')} style={styles.Txt861}>Pass A Lead</Text>
+            <Text style={styles.Txt645}>given: 19</Text>
+            <Text style={styles.Txt811}>converted: 27</Text>
+            <Text style={styles.Txt101}>Reviews</Text>
+            <Text style={styles.Txt427}>
+              We'll clean your carpets
+            </Text>
+            <Text style={styles.Txt932}>Carrie's Carpet Clean</Text>
+            <Image
+              style={styles.Star1}
+              source={{
+                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A42?alt=media&token=be688578-57a2-4020-bb22-78d1cf2408d3",
+              }}
+            />
+            <Image
+              style={styles.Star5}
+              source={{
+                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A43?alt=media&token=8d5491a5-8c47-4d93-bd6c-4afdbd933442",
+              }}
+            />
+            <Image
+              style={styles.Star2}
+              source={{
+                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A44?alt=media&token=e3dc0827-5e79-4a4b-9ee1-bd521d51bf35",
+              }}
+            />
+            <Image
+              style={styles.Star3}
+              source={{
+                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A45?alt=media&token=add6a2ee-f227-4cf1-bd2d-fff1f7b60c6c",
+              }}
+            />
+            <Image
+              style={styles.Star4}
+              source={{
+                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A46?alt=media&token=68e55804-4dfd-414e-b91a-b6d1bd067907",
+              }}
+            />
+            <Text style={styles.Txt744}>(76)</Text>
+            <View style={styles.Group642}>
               <Image
-                style={styles.FrameCustom}
-                source={require('./../assets/window-cleaner.jpg')}
+                style={styles.Image24}
+                source={{
+                  uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A61?alt=media&token=340e8b51-9d17-400a-bedf-5e1b881bb9e8",
+                }}
               />
+              <View style={styles.Group270}>
+                <Image
+                  style={styles.Frame4}
+                  source={{
+                    uri: "https://work-together-app-icons.s3.amazonaws.com/carpet.jpg",
+                  }}
+                />
+                <View style={styles.Group210}>
+                  <Image
+                    style={styles.FrameCustom}
+                    source={{uri: "https://work-together-app-icons.s3.amazonaws.com/carpetClean.jpg",}}
+                  />
+    
+                </View>
+                <View style={styles.Group400}>
+                  <Image
+                    style={styles.Frame6}
+                    source={{
+                      uri: "https://work-together-app-icons.s3.amazonaws.com/carpetCleaner.jpg",
+                    }}
+                  />
+                  <Image
+                    style={styles.Frame5}
+                    source={{
+                      uri: "https://work-together-app-icons.s3.amazonaws.com/carpetVacuum.jpg",
+                    }}
+                  />
+                </View>
+              </View>
+              
+              <View style={styles.NavBar}>
+                
+
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Favorites')}>
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>      
+                </TouchableHighlight>
+
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('Home')}>
+                    <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
+                </TouchableHighlight>
+
+
+                <TouchableHighlight onPress={() => this.props.navigation.navigate('InternalProfile')}>
+                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
+                </TouchableHighlight>
+                
+              </View>
 
             </View>
-            <View style={styles.Group400}>
-              <Image
-                style={styles.Frame6}
-                source={{
-                  uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A59?alt=media&token=823e50e6-1845-4898-8869-7c01edd723f2",
-                }}
-              />
-              <Image
-                style={styles.Frame5}
-                source={{
-                  uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A57?alt=media&token=c0f5b24b-4d96-4a38-8efd-0d502ee7624a",
-                }}
-              />
-            </View>
+            <Text onPress={() => this.props.navigation.navigate('CarriesLeadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
           </View>
-          <View style={styles.Group170}>
-            <Image
-              style={styles.NavBarIcons}
-              source={{
-                uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/m8jo9g8y6hh-2%3A31?alt=media&token=88104b82-5d00-44d7-9152-172e24b251b9",
-              }}
-            />
-          </View>
-        </View>
-        <Text onPress={() => this.props.navigation.navigate('leadsInfo')} style={styles.Txt553}>Leads this quarter</Text>
-      </View>
-    );
+        );
     }
 }
 
+const WINDOW_HEIGHT = Dimensions.get("window").height;
+const WINDOW_WIDTH = Dimensions.get("window").width;
+
 const styles = StyleSheet.create({
+    NavBarIcon: {
+        height: 45,
+        width: 45,
+        borderBottomWidth: 1,
+        borderTopWidth: 1,
+        
+      },
+      NavBar: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '80%',
+        height: 100,
+        top: WINDOW_HEIGHT - 875,
+        backgroundColor: 'green'
+      },
     InternalProfileView: {
       display: "flex",
       flexDirection: "column",
@@ -342,4 +372,3 @@ const styles = StyleSheet.create({
       height: 33,
     },
   })
-

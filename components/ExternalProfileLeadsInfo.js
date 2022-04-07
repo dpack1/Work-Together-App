@@ -8,13 +8,13 @@ import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import React, { Component } from 'react';
 
-export default class LeadsInfo extends Component {
+export default class ExternalProfileLeadsInfo extends Component {
     render() {
         return (
             <View style={styles.container}>
         
               <View style={styles.back}>
-                <Text onPress={() => this.props.navigation.navigate('Profile')} style={styles.backButton}>X</Text>
+                <Text onPress={() => this.props.navigation.navigate('ExternalProfile')} style={styles.backButton}>X</Text>
               </View>
                 
               <View style={styles.logoContainer}>
@@ -23,24 +23,24 @@ export default class LeadsInfo extends Component {
         
               <Text style={styles.title}>My Referrals</Text>
         
-              <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c65e6af836c384405da617fc659d1e70'}} style={styles.profilePicture} />
+              <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30'}} style={styles.profilePicture} />
         
               <View style={styles.section}>
-                <Text style={styles.sectionText}>Given: 52</Text>
-                <Text style={styles.sectionText}>Converted: 46</Text>
-                <Text style={styles.sectionText}>Conversion Rate: 88%</Text>
+                <Text style={styles.sectionText}>Given: 89</Text>
+                <Text style={styles.sectionText}>Converted: 67</Text>
+                <Text style={styles.sectionText}>Conversion Rate: 75%</Text>
               </View>
         
               <View style={styles.section}>
-                <Text style={styles.sectionText}>Recieved: 48</Text>
-                <Text style={styles.sectionText}>Converted: 40</Text>
-                <Text style={styles.sectionText}>Conversion Rate: 80%</Text>
+                <Text style={styles.sectionText}>Recieved: 108</Text>
+                <Text style={styles.sectionText}>Converted: 90</Text>
+                <Text style={styles.sectionText}>Conversion Rate: 83%</Text>
               </View>
         
               <View style={styles.section}>
                 <Text style={styles.bottomSection}>Top Referrers: </Text>
-                <Text style={styles.bottomSectionReferrers}>Logo Lawncare</Text>
-                <Text style={styles.bottomSectionReferrers}>Carrie's Carpet Cleaning</Text>
+                <Text style={styles.bottomSectionReferrers}>Moe's Mowing</Text>
+                <Text style={styles.bottomSectionReferrers}>KB Homes</Text>
               </View>
         
         
@@ -99,4 +99,3 @@ const styles = StyleSheet.create({
       color: '#c4c4c4'
     }
   });
-
