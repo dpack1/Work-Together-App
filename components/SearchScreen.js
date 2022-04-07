@@ -130,12 +130,7 @@ export default class SearchResult extends Component {
           }}
         />
         <Text style={styles.Txt833}>56</Text>
-        <Image
-          style={styles.NavBarIcons}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A336?alt=media&token=8f4be4e0-5363-400a-8686-5a0addaa4350",
-          }}
-        />
+        
         <Image
           style={styles.Image49}
           source={{
