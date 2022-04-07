@@ -45,9 +45,10 @@ export default function App() {
             : 'ios-person-outline';
           }
     
-    return <Ionicons name={iconName} size={size} color={color}     />;
+    return <Ionicons name={iconName} size={40} color={color}     />;
        },
        headerShown: false,
+       tabBarShowLabel: false,
     })}
     tabBarOptions={{
     activeTintColor: 'tomato',
