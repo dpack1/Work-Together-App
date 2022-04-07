@@ -47,11 +47,13 @@ export default function App() {
     
     return <Ionicons name={iconName} size={size} color={color}     />;
        },
+       headerShown: false,
     })}
     tabBarOptions={{
     activeTintColor: 'tomato',
     inactiveTintColor: 'gray',
     }}
+  
    >
         <Tab.Screen name="Favorites" component={FavoriteStackScreen} />
         <Tab.Screen name="Home" component={HomeStackScreen} />
