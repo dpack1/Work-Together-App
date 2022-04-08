@@ -21,10 +21,11 @@ export default class ExternalProfileLeadsInfo extends Component {
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
               </View>
         
-              <Text style={styles.title}>My Referrals</Text>
-        
-              <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30'}} style={styles.profilePicture} />
-        
+              <Text style={styles.title}>Referrals</Text>
+
+              <View style={styles.logoPicture}>
+                <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30'}} style={styles.profilePicture} />
+              </View>
               <View style={styles.section}>
                 <Text style={styles.sectionText}>Given: 89</Text>
                 <Text style={styles.sectionText}>Converted: 67</Text>
@@ -58,15 +59,23 @@ const styles = StyleSheet.create({
     title: {
       color: '#ff8500',
       fontWeight: '500',
-      fontSize: 15
+      fontSize: 20,
+      margin: 10,
     },
     logoContainer: {
       alignItems: 'center',
       paddingTop: '10%',
+      
     },
+
     logo: {
       width: 300,
       height: 60,
+    },
+
+    logoPicture: {
+      borderRadius: 20,
+      backgroundColor: 'grey'
     },
     profilePicture: {
       width: 170,

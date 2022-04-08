@@ -10,6 +10,12 @@ export default class FavoritesScreen extends Component {
         return (
             <View style={styles.FavoritesView}>
       <View style={styles.PlusButtonView}>
+      <Image
+          style={styles.workogether}
+          source={{
+            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A348?alt=media&token=2eff237d-58cc-40bd-b2bc-e7c01b7940ee",
+          }}
+        />
         <Image
           style={styles.Vector9}
           source={{
@@ -141,7 +147,7 @@ export default class FavoritesScreen extends Component {
           }}
         />
         <View style={styles.Group9107}>
-          <Text style={styles.Txt955}>my Favorites</Text>
+          <Text style={styles.Txt955}>Favorites</Text>
           <Text style={styles.Txt1094}>
             Businesses you want to keep in mind for future referrals
           </Text>
@@ -171,12 +177,7 @@ export default class FavoritesScreen extends Component {
             uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A347?alt=media&token=79245935-f123-4161-96b7-f2aa2a4c2ec7",
           }}
         />
-        <Image
-          style={styles.Image57}
-          source={{
-            uri: "https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/k61yg9rrv6-2%3A348?alt=media&token=2eff237d-58cc-40bd-b2bc-e7c01b7940ee",
-          }}
-        />
+       
       </View>
       <TouchableHighlight onPress={() => this.props.navigation.navigate('CarrieProfile')}>
       <Image
@@ -552,6 +553,7 @@ const styles = StyleSheet.create({
       height: 755,
     },
     Txt955: {
+      marginTop: '15%',
       fontSize: 24,
       fontFamily: "Montserrat Alternates, sans-serif",
       fontWeight: "400",
@@ -605,12 +607,20 @@ const styles = StyleSheet.create({
       width: 23,
       height: 22,
     },
-    Image57: {
-      position: "absolute",
+    workogether: {
+      // position: "absolute",
+      alignItems: 'center',
+      paddingTop: '5%',
+      paddingBottom: '2%',
+      borderBottomWidth: 1,
+      paddingBottom: "5%",
+      marginTop: '5%',
+      marginBottom: '2%',
       top: 11,
       left: 62,
       width: 260,
       height: 49,
+      
     },
   
     CarrieSCarpetLogo: {

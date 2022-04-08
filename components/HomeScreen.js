@@ -17,13 +17,15 @@ export default class Homescreen extends Component {
             <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
         </View>
 
-        <Pressable onPress={() => this.props.navigation.navigate('theSearchScreen')} style={styles.searchPressable}>
-          <View pointerEvents="none">
-          <TextInput placeholder="Search" style={styles.search} />
-          </View>
-        </Pressable>
-
         <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+
+          <Pressable onPress={() => this.props.navigation.navigate('theSearchScreen')} style={styles.searchPressable}>
+            <View pointerEvents="none">
+            <TextInput placeholder="Search" style={styles.search} />
+            </View>
+          </Pressable>
+
+        
 
             <View style={styles.listElement}>
             <View style={styles.elementTopRow}>
@@ -33,9 +35,9 @@ export default class Homescreen extends Component {
             <View>
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/5525ee56a5fb0861a6699a14dc3e0dbb'}} style={styles.itemCompanyPicture} />
             </View>
-            <View style={styles.elementBottomRow}>
+            {/* <View style={styles.elementBottomRow}>
                 <Text>Fresh Cut</Text>
-            </View>
+            </View> */}
             </View>
 
             <View style={styles.listElement}>
@@ -46,9 +48,9 @@ export default class Homescreen extends Component {
             <View>
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/01d1f304d219cb7161b5d9cf9c8714ba'}} style={styles.itemCompanyPicture} />
             </View>
-            <View style={styles.elementBottomRow}>
+            {/* <View style={styles.elementBottomRow}>
                 <Text>Squeaky Clean Windows</Text>
-            </View>
+            </View> */}
             </View>
 
             <View style={styles.listElement}>
@@ -59,9 +61,9 @@ export default class Homescreen extends Component {
             <View>
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/5525ee56a5fb0861a6699a14dc3e0dbb'}} style={styles.itemCompanyPicture} />
             </View>
-            <View style={styles.elementBottomRow}>
+            {/* <View style={styles.elementBottomRow}>
                 <Text>Simply The Best</Text>
-            </View>
+            </View> */}
             </View>
 
         </ScrollView>
@@ -80,43 +82,58 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   logoContainer: {
+
     alignItems: 'center',
-    paddingTop: '10%',
+    paddingTop: '5%',
+    paddingBottom: '2%',
+    borderBottomWidth: 1,
+    marginTop: '5%',
+    marginBottom: '2%',
   },
   logo: {
     width: 300,
     height: 60,
   },
   search: {
-    borderTopWidth: 1,
-    borderBottomWidth: 1,
-    borderLeftWidth: 1,
-    borderRightWidth: 1,
-    height: 50,
+
+    borderWidth:1,
+    padding: 10,
+    height: '100%',
     fontSize: 20,
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '95%',
+    margin: 0,
+    // marginLeft: 'auto',
+    // marginRight: 'auto',
+    width: '100%',
     borderRadius: 15,
     backgroundColor: "#e5e5e5",
+
   },
   searchPressable: {
     height: 50,
     fontSize: 20,
-    margin: 20,
-    width: '95%',
+    margin: 0,
+    width: '100%',
 
   },
   profilePicture: {
-    width: 75,
-    height: 75,
+    width: 60,
+    height: 60,
+    borderWidth: 0,
+    borderRadius: 20,
   },
   listElement: {
-    paddingTop: 15
+    paddingTop: 0,
+    paddingBottom: 10,
+    marginTop: 10,
+    marginBottom: 10,
+    borderRadius: 10,
   },
   elementTopRow: {
     flexDirection: "row",
     alignItems: 'center',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingRight: 5,
   },
   itemCompanyName: {
     fontSize: 18,
@@ -127,16 +144,20 @@ const styles = StyleSheet.create({
   itemCompanyPicture: {
     width: '100%',
     //height: '100%',
-    height: 300
+    height: 300,
+    borderWidth: 1,
+    borderRadius: 10,
   },
   scrollView: {
-    width: '80%',
-    height: '70%', //70
+    width: '90%',
+    height: '85%', //70
+    borderRadius: 10,
     
   },
   elementBottomRow: {
     alignItems: 'center',
-    paddingTop: 15
+    paddingTop: 15,
+    
   },
   NavBarIcon: {
     height: 45,
