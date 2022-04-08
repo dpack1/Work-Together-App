@@ -170,7 +170,7 @@ export default class SearchResult extends Component {
         <Image
           style={styles.GutterGuyLogo}
           source={{
-            uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
+            uri: "https://work-together-app-icons.s3.amazonaws.com/lawnLogo1.jpg",
           }}
         />
         <Image
@@ -199,14 +199,15 @@ export default class SearchResult extends Component {
       <Image
         style={styles.NixitHandymanLogo}
         source={{
-          uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
+          uri: "https://work-together-app-icons.s3.amazonaws.com/lawnLogo2.jpg",
+
         }}
       />
       <Text style={styles.Txt888}>75% of the leads they pass convert</Text>
       <Image
         style={styles.LogoLawncareLogo}
         source={{
-          uri: "https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/623f61d9a46df121536ebc0cc3691d30",
+          uri: "https://work-together-app-icons.s3.amazonaws.com/lawnLogo3.jpg",
         }}
       />
       <Image
@@ -592,9 +593,9 @@ const styles = StyleSheet.create({
     CarrieSCarpetLogo: {
       position: "absolute",
       top: 173,
-      left: 48,
+      left: 37,//48,
       width: 77,
-      height: 75,
+      height: 67//75,
     },
     NixitHandymanLogo: {
       position: "absolute",
@@ -617,9 +618,9 @@ const styles = StyleSheet.create({
     LogoLawncareLogo: {
       position: "absolute",
       top: 493,
-      left: 47,
-      width: 53,
-      height: 55,
+      left: 37,
+      width: 77,
+      height: 67,
     },
     Star61: {
       position: "absolute",
