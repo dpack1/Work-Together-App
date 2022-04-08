@@ -18,7 +18,7 @@ export default class PassALead extends Component {
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
               </View>
         
-              <Text style={{ color: 'chocolate', fontSize: 20  }}> Refer Buisness Name</Text>
+              <Text style={{ color: 'chocolate', fontSize: 20  }}> Lawn Logo</Text>
         
               
         

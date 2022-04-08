@@ -32,7 +32,7 @@ export default class CarriesLeadSent extends Component {
               </View>
         
               <View style={styles.smallTextSection}>
-                <Text style={styles.smallText}>We’ve emailed BUSINESS NAME’s information to CLIENT NAME. Thanks for referring them!!</Text>
+                <Text style={styles.smallText}>We’ve emailed Carrie's Carpet Cleaning's information to Kim Possible. Thanks for referring them!!</Text>
               </View>
             
         

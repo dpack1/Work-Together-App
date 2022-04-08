@@ -18,7 +18,7 @@ export default class LeadSent extends Component {
                 <Image source={{uri: 'https://sizze-figma-plugin-images-upload.s3.us-east-2.amazonaws.com/c82344d2997beafd4ad030577f9ebc2b'}} style={styles.logo} />
               </View>
         
-              <Text style={{ color: 'chocolate', fontSize: 20  }}> Refer Buisness Name</Text>
+              <Text style={{ color: 'chocolate', fontSize: 20  }}> Lawn Logo</Text>
         
               
         
@@ -32,7 +32,7 @@ export default class LeadSent extends Component {
               </View>
         
               <View style={styles.smallTextSection}>
-                <Text style={styles.smallText}>We’ve emailed BUSINESS NAME’s information to CLIENT NAME. Thanks for referring them!!</Text>
+                <Text style={styles.smallText}>We’ve emailed Lawn Logo's information to Kim Possible. Thanks for referring them!!</Text>
               </View>
             
         
