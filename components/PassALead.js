@@ -7,6 +7,7 @@ import {StackNavigator} from 'react-navigation';
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import React, { Component } from 'react';
+import emailjs from '@emailjs/browser';
 
 export default class PassALead extends Component {
     render() {
@@ -34,30 +35,33 @@ export default class PassALead extends Component {
               <TextInput placeholder="Client Email" style={styles.search}/>
         
         
-              <TextInput placeholder="Message" style={styles.searchMessage}/>
+              <TextInput placeholder="Message" style={styles.search}/>
         
         
               <View style={styles.button}>
                 <Button
                   title="send"
                   color="orange"
-                  onPress={() => this.props.navigation.navigate('LeadSent')}
+                  onPress={() => {SendButtonClick()}}
                 />
               </View>
               
-              <View style={styles.footer}>
-              <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/favorites.png'}} style={styles.NavBarIcon}/>
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/home.png'}} style={styles.NavBarIcon}/>
-                <Image source={{ uri: 'https://work-together-app-icons.s3.amazonaws.com/profile.png'}} style={styles.NavBarIcon}/>
-        
-                
-              </View>
+
         
         
         
               <StatusBar style="auto" />
             </View>
           );
+
+          function SendButtonClick () {
+            console.log("Entered SendButtonClick");
+            
+            let templateParams = {
+              reply_to: 'cb.raven97@gmail.com'
+            }
+            emailjs.send('service_77n4ion', 'template_z5sd77x', templateParams, 'uwzguVbzgw7LaayQh');
+          }
     }
 }
 

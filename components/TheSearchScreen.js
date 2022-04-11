@@ -123,7 +123,7 @@ const styles = StyleSheet.create({
     paddingBottom: '0%',
 
     fontSize: 25,
-      fontFamily: "sans-serif",
+      fontFamily: "Arial",
       fontWeight: "400",
       lineHeight: 42,
       color: "rgba(255,140,0,1)",

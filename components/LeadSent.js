@@ -32,7 +32,7 @@ export default class LeadSent extends Component {
               </View>
         
               <View style={styles.smallTextSection}>
-                <Text style={styles.smallText}>We’ve emailed Lawn Logo's information to Kim Possible. Thanks for referring them!!</Text>
+                <Text style={styles.smallText}>We’ve emailed Lawn Logo's information to your client. Thanks for referring them!!</Text>
               </View>
             
         

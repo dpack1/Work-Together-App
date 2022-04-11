@@ -21,6 +21,8 @@ import ExternalProfileLeadsInfo from './components/ExternalProfileLeadsInfo';
 import leadsInfo from './components/leadsInfo';
 import theSearchScreen from './components/TheSearchScreen';
 
+console.disableYellowBox = true;
+
 
 const Tab = createBottomTabNavigator();
 export default function App() {
