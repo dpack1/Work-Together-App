@@ -1,5 +1,5 @@
 # Work-Together-App
-This app wasa CS 356 class assignment to produce a functional prototype app that adapted to user experiences and stories. 
+This app was a CS 356 class assignment to produce a functional prototype app that adapted to user experiences and stories. 
 
 Work Together solves the problem of small business owners or contractors need a way to refer clients to other businesses when they request another job they need performed
 
