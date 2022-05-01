@@ -53,8 +53,12 @@ Changes we will ignore
 - Took some scrolling to get to the bottom bar- that’s a prototype-only problem & will be resolved in a production app
 
 
-# Link to your figma prototype: 
+# Links 
+## Figma Proto type 
 https://www.figma.com/file/Y4ghTs179Ezq4L8MpGn2cJ/WorkTogether---356?node-id=0%3A1
+## App Screeenshots
+https://docs.google.com/document/d/1x-jR37F6MmbKUTZDNmCL8cmnZnAC4SQFzkKsZ9AoMLo/edit?usp=sharing
+
 
 
 # Impact of User Stories
